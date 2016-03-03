@@ -1,0 +1,3 @@
+[submodule "src/pwm"]
+	path = src/pwm
+	url = https://github.com/pwm-project/pwm

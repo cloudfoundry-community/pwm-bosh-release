@@ -1,0 +1,5 @@
+check process pwm
+  with pidfile /var/vcap/sys/run/pwm/pwm.pid
+  start program "/var/vcap/jobs/pwm/bin/monit_debugger pwm_ctl '/var/vcap/jobs/pwm/bin/ctl start'"
+  stop program "/var/vcap/jobs/pwm/bin/monit_debugger pwm_ctl '/var/vcap/jobs/pwm/bin/ctl stop'"
+  group vcap

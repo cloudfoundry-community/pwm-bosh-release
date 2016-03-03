@@ -5,7 +5,7 @@ set -e
 
 cd ${BUILD_DIR}/pwm
 mvn -X -B -U -e clean install -DskipTests=true -Pskip-git-info  --settings settings.xml 
-mv target/elpaaso-sandbox-service-1.0-SNAPSHOT.jar  ${BUILD_DIR}/pwm.war
+mv target/pwm-1.8.0-SNAPSHOT.war  ${BUILD_DIR}/pwm.war
 
 
 cd ${BUILD_DIR}

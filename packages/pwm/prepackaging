@@ -4,7 +4,7 @@ set -e
 
 
 cd ${BUILD_DIR}/pwm
-mvn -X -B -U -e clean install -DskipTests=true -Pskip-git-info  --settings settings.xml 
+./mvnw -B -e clean install
 mv target/pwm-1.8.0-SNAPSHOT.war  ${BUILD_DIR}/pwm.war
 
 

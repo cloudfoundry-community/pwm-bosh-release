@@ -13,7 +13,13 @@ export HOME=/var/vcap
 
 cd ${BOSH_INSTALL_TARGET}
 
-tar zxvf ${BOSH_COMPILE_TARGET}/tomcat/apache-tomcat-apache-tomcat-8.0.33.tar.gz
+echo "BOSH_COMPILE_TARGET ${BOSH_COMPILE_TARGET}"
+echo "BOSH_INSTALL_TARGET ${BOSH_INSTALL_TARGET}"
+
+sleep 120 
+
+
+tar zxvf ${BOSH_COMPILE_TARGET}/tomcat/apache-tomcat-8.0.33.tar.gz
 if [[ $? != 0 ]] ; then
   echo "Cannot unpack Tomcat"
   exit 1

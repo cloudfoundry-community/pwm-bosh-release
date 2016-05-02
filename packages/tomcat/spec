@@ -1,7 +1,5 @@
 ---
 name: tomcat
-dependencies:
-- openjdk
-- pwm
+dependencies: []
 files:
 - tomcat/apache-tomcat-8.0.33.tar.gz

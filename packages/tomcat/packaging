@@ -11,11 +11,18 @@ CPUS=$(grep -c ^processor /proc/cpuinfo)
 export HOME=/var/vcap
 
 
-TOMCAT_VERSION=jdk1.8.0_*
-TOMCAT_TAR_BALL=openjdk.tar.gz
 cd ${BOSH_INSTALL_TARGET}
 
-tar zxvf ${BOSH_COMPILE_TARGET}/tomcat/${TOMCAT_TAR_BALL}
+tar zxvf ${BOSH_COMPILE_TARGET}/tomcat/apache-tomcat-apache-tomcat-8.0.33.tar.gz
+if [[ $? != 0 ]] ; then
+  echo "Cannot unpack Tomcat"
+  exit 1
+fi
 
-mv ${TOMCAT_VERSION}/* .
-rmdir ${TOMCAT_VERSION}
+mv apache-tomcat-8.0.33 tomcat
+
+cd tomcat
+rm -rf webapps/*
+cp -a ${BOSH_COMPILE_TARGET}/pwm/pwm.war webapps/ROOT.war
+
+

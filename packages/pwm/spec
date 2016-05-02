@@ -2,10 +2,8 @@
 name: pwm
 dependencies:
 - java-common
-- maven
 - openjdk
 files:
 - pwm/**/*
 - openjdk/*
-- maven/*
 - common/setup-java-prepackaging.sh

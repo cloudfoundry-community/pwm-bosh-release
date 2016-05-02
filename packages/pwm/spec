@@ -1,8 +1,6 @@
 ---
 name: pwm
-dependencies:
-- java-common
-- openjdk
+dependencies: []
 files:
 - pwm/**/*
 - openjdk/*

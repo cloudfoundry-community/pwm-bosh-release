@@ -7,7 +7,11 @@ CPUS=$(grep -c ^processor /proc/cpuinfo)
 # $BOSH_COMPILE_TARGET - where this package & spec'd source files are available
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 export HOME=/var/vcap
+echo "BOSH_COMPILE_TARGET ${BOSH_COMPILE_TARGET}"
+echo "BOSH_INSTALL_TARGET ${BOSH_INSTALL_TARGET}"
 
+# troubleshooting
+#sleep 10800
 cp -r ${BOSH_COMPILE_TARGET}/*.war ${BOSH_INSTALL_TARGET}
 
 

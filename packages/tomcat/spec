@@ -1,0 +1,6 @@
+---
+name: tomcat
+dependencies:
+- openjdk
+files:
+- tomcat/apache-tomcat-8.0.33.tar.gz

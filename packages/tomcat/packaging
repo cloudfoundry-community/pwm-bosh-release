@@ -29,6 +29,6 @@ mv apache-tomcat-8.0.33 tomcat
 
 cd tomcat
 rm -rf webapps/*
-cp -a /var/vcap/packages/pwm/pwm.war  webapps/ROOT.war
+#cp -a /var/vcap/packages/pwm/pwm.war  webapps/ROOT.war
 
 

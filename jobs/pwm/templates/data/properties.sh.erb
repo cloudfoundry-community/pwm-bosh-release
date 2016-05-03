@@ -11,6 +11,6 @@ export JOB_FULL="$NAME/$JOB_INDEX"
 
 
 export JAVA_HOME=/var/vcap/packages/openjdk
-export  $CATALINA_HOME=/var/vcap/packages/tomcat
-export  $CATALINA_BASE=/var/vcap/packages/tomcat
-export $CATALINA_OPTS="-DXmx512M"
+export CATALINA_HOME=/var/vcap/packages/tomcat/tomcat
+export CATALINA_BASE=/var/vcap/packages/tomcat/tomcat
+export CATALINA_OPTS="-DXmx512M -Djava.io.tmpdir=/var/vcap/"

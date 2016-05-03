@@ -18,9 +18,10 @@ case $1 in
     echo $$ > $PIDFILE
 
 	# link pwm package war and log dirs in CATALINA_BASE
-	exec chpst -u vcap:vcap ln -sf /var/vcap/jobs/pwm/packages/pwm /var/vcap/jobs/pwm/tomcat/webapps/ROOT.war
-	exec chpst -u vcap:vcap ln -sf /var/vcap/sys/log/pwm/ /var/vcap/jobs/pwm/tomcat/logs
-	exec chpst -u vcap:vcap ln -sf /var/vcap/data/pwm/temp /var/vcap/jobs/pwm/tomcat/temp
+	mkdir -p /var/vcap/jobs/pwm/tomcat/webapps
+	ln -sf /var/vcap/jobs/pwm/packages/pwm /var/vcap/jobs/pwm/tomcat/webapps/ROOT.war
+	ln -sf /var/vcap/sys/log/pwm /var/vcap/jobs/pwm/tomcat/logs
+	ln -sf /var/vcap/data/pwm/temp /var/vcap/jobs/pwm/tomcat/temp
 
     exec chpst -u vcap:vcap $CATALINA_HOME/bin/catalina.sh run \
          >>$LOG_DIR/$JOB_NAME.log 2>&1

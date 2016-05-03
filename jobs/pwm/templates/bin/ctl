@@ -19,6 +19,7 @@ case $1 in
 
 	# link pwm package war and log dirs in CATALINA_BASE
 	mkdir -p /var/vcap/jobs/pwm/tomcat/webapps
+	mkdir -p /var/vcap/jobs/pwm/tomcat/logs
 	ln -sf /var/vcap/jobs/pwm/packages/pwm /var/vcap/jobs/pwm/tomcat/webapps/ROOT.war
 	ln -sf /var/vcap/sys/log/pwm /var/vcap/jobs/pwm/tomcat/logs
 	ln -sf /var/vcap/data/pwm/temp /var/vcap/jobs/pwm/tomcat/temp

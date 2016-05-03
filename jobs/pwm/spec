@@ -10,4 +10,14 @@ templates:
   data/properties.sh.erb: data/properties.sh
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
+  
+  tomcat/conf/catalina.policy.erb: tomcat/conf/catalina.policy  
+  tomcat/conf/catalina.properties.erb: tomcat/conf/catalina.properties
+  tomcat/conf/context.xml.erb: tomcat/conf/context.xml
+  tomcat/conf/logging.properties.erb: tomcat/conf/logging.properties
+  tomcat/conf/server.xml.erb: tomcat/conf/server.xml
+  tomcat/conf/tomcat-users.xml.erb: tomcat/conf/tomcat-users.xml
+  tomcat/conf/tomcat-users.xsd.erb: tomcat/conf/tomcat-users.xsd
+  tomcat/conf/web.xml.erb: tomcat/conf/web.xml
+  
 properties: {}

@@ -16,7 +16,7 @@ cd ${BOSH_INSTALL_TARGET}
 echo "BOSH_COMPILE_TARGET ${BOSH_COMPILE_TARGET}"
 echo "BOSH_INSTALL_TARGET ${BOSH_INSTALL_TARGET}"
 
-sleep 120 
+#sleep 120 
 
 
 tar zxvf ${BOSH_COMPILE_TARGET}/tomcat/apache-tomcat-8.0.33.tar.gz
@@ -29,6 +29,6 @@ mv apache-tomcat-8.0.33 tomcat
 
 cd tomcat
 rm -rf webapps/*
-cp -a ${BOSH_COMPILE_TARGET}/pwm/pwm.war webapps/ROOT.war
+cp -a /var/vcap/packages/pwm/pwm.war  webapps/ROOT.war
 
 

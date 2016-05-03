@@ -1,1 +1,9 @@
---- {}
+---
+openjdk/openjdk.tar.gz:
+  object_id: 067c3b36-dec7-413d-bce5-153f48daee21
+  sha: 9fc65908420c92047346e5bcc66fee0aad422c5e
+  size: 126476497
+tomcat/apache-tomcat-8.0.33.tar.gz:
+  object_id: 3f476b50-403e-47fe-a8ae-c0ab55cc2266
+  sha: c44e6b6a58b514818e9c944d8f04ca5cc58d0777
+  size: 9250362

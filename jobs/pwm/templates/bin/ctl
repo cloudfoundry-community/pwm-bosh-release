@@ -27,6 +27,7 @@ case $1 in
 	# unzip pwm.war to enable web.xml and conf override
 	mkdir -p /var/vcap/data/pwm/tomcat/webapps/ROOT
 	cd /var/vcap/data/pwm/tomcat/webapps/ROOT
+	rm -rf  /var/vcap/data/pwm/tomcat/webapps/ROOT/*
 	unzip /var/vcap/packages/pwm/pwm.war
 	
 	#override web.xml

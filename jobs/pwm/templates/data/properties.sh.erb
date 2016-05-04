@@ -13,5 +13,5 @@ export JOB_FULL="$NAME/$JOB_INDEX"
 export JAVA_HOME=/var/vcap/packages/openjdk
 export JAVA_OPTS="-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom"
 export CATALINA_HOME=/var/vcap/packages/tomcat/tomcat
-export CATALINA_BASE=/var/vcap/jobs/pwm/tomcat
-export CATALINA_OPTS="-Xms512M -Xmx1024M -server -XX:+UseParallelGC -Djava.io.tmpdir=/var/vcap/data/pwm/temp  -Djava.util.logging.config.file=/var/vcap/jobs/pwm/tomcat/conf/logging.properties"
+export CATALINA_BASE=/var/vcap/data/pwm/tomcat/
+export CATALINA_OPTS="-Xms512M -Xmx1024M -server -XX:+UseParallelGC -Djava.util.logging.config.file=/var/vcap/jobs/pwm/tomcat/conf/logging.properties"

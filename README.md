@@ -1,4 +1,12 @@
-# BOSH Release for pwm-bosh
+# BOSH Release for PWM
+
+PWM is an open source password self service application for LDAP directories. PWM is an ideal candidate for organizations that wish to “roll their own” password self service solution, but do not wish to start from scratch. [Overview/Screenshots](https://docs.google.com/presentation/d/1LxDXV_iiToJXAzzT9mc1xXO0atVObmRpCame6qXOyxM/pub?slide=id.p8)
+
+Official project page is at [https://github.com/pwm-project/pwm/](https://github.com/pwm-project/pwm/).
+
+The purpose of this bosh release is to provide bosh operators an easy solution for self service onboarding.
+Typical use is managing identity in an OpenLDAP directory, and configure Cloudfoundry UAA to use OpenLDAP as identity backend
+
 
 ## Usage
 

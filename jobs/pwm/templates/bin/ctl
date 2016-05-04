@@ -31,10 +31,16 @@ case $1 in
 	unzip /var/vcap/packages/pwm/pwm.war
 	
 	#override web.xml
-	cp -f /var/vcap/jobs/pwm/pwm/web.xml /var/vcap/data/pwm/tomcat/webapps/ROOT/WEB-INF/web.xml
+	#cp -f /var/vcap/jobs/pwm/pwm/web.xml /var/vcap/data/pwm/tomcat/webapps/ROOT/WEB-INF/web.xml
 	
 	#enable vcap access to tomcat base
 	chmod -R ugo+rwx /var/vcap/data/pwm/tomcat
+
+	#assume pwm-data is created and available
+	mkdir -p /var/vcap/store/pwm/pwm-data
+	chmod -R ugo+rwx /var/vcap/store/pwm/pwm-data
+
+
 
     exec chpst -u vcap:vcap $CATALINA_HOME/bin/catalina.sh run \
          >>$LOG_DIR/$JOB_NAME.log 2>&1

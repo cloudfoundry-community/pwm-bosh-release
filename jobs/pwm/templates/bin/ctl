@@ -22,9 +22,18 @@ case $1 in
 	mkdir -p /var/vcap/data/pwm/tomcat/webapps
 	mkdir -p /var/vcap/data/pwm/tomcat/logs
 	mkdir -p /var/vcap/data/pwm/tomcat/work
-	chmod ugo+rwx /var/vcap/data/pwm/tomcat/*
 	ln -sf /var/vcap/jobs/pwm/tomcat/conf /var/vcap/data/pwm/tomcat/conf
-	ln -sf /var/vcap/packages/pwm/pwm.war /var/vcap/data/pwm/tomcat/webapps/ROOT.war
+	
+	# unzip pwm.war to enable web.xml and conf override
+	mkdir -p /var/vcap/data/pwm/tomcat/webapps/ROOT
+	cd /var/vcap/data/pwm/tomcat/webapps/ROOT
+	unzip /var/vcap/packages/pwm/pwm.war
+	
+	#override web.xml
+	cp -f /var/vcap/jobs/pwm/pwm/web.xml /var/vcap/data/pwm/tomcat/webapps/ROOT/WEB-INF/web.xml
+	
+	#enable vcap access to tomcat base
+	chmod -R ugo+rwx /var/vcap/data/pwm/tomcat
 
     exec chpst -u vcap:vcap $CATALINA_HOME/bin/catalina.sh run \
          >>$LOG_DIR/$JOB_NAME.log 2>&1

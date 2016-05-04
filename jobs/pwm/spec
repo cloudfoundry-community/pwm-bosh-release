@@ -20,4 +20,6 @@ templates:
   tomcat/conf/tomcat-users.xsd.erb: tomcat/conf/tomcat-users.xsd
   tomcat/conf/web.xml.erb: tomcat/conf/web.xml
   
+  pwm/web.xml.erb: pwm/web.xml
+  
 properties: {}

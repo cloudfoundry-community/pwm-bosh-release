@@ -24,7 +24,7 @@ case $1 in
 	mkdir -p /var/vcap/data/pwm/tomcat/work
 	chmod ugo+rwx /var/vcap/data/pwm/tomcat/*
 	ln -sf /var/vcap/jobs/pwm/tomcat/conf /var/vcap/data/pwm/tomcat/conf
-	ln -sf /var/vcap/jobs/pwm/packages/pwm /var/vcap/data/pwm/tomcat/webapps/ROOT.war
+	ln -sf /var/vcap/packages/pwm/pwm.war /var/vcap/data/pwm/tomcat/webapps/ROOT.war
 
     exec chpst -u vcap:vcap $CATALINA_HOME/bin/catalina.sh run \
          >>$LOG_DIR/$JOB_NAME.log 2>&1

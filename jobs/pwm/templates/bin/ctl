@@ -22,6 +22,7 @@ case $1 in
 	mkdir -p /var/vcap/data/pwm/tomcat/webapps
 	mkdir -p /var/vcap/data/pwm/tomcat/logs
 	mkdir -p /var/vcap/data/pwm/tomcat/work
+        mkdir -p /var/vcap/data/pwm/tomcat/temp
 	ln -sf /var/vcap/jobs/pwm/tomcat/conf /var/vcap/data/pwm/tomcat/conf
 	
 	# unzip pwm.war to enable web.xml and conf override
@@ -38,6 +39,7 @@ case $1 in
 
 	#assume pwm-data is created and available
 	mkdir -p /var/vcap/store/pwm/pwm-data
+        cp -f /var/vcap/jobs/pwm/pwm/PwmConfiguration.xml /var/vcap/store/pwm/pwm-data/PwmConfiguration.xml
 	chmod -R ugo+rwx /var/vcap/store/pwm/pwm-data
 
 

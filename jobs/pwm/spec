@@ -22,4 +22,56 @@ templates:
   
   pwm/web.xml.erb: pwm/web.xml
   
-properties: {}
+properties:
+  pwm.selfURL:
+    description: Pwm Site URL
+ 
+  pwm.forwardURL:
+    description: Login site
+    
+  pwm.ldap.serverUrls:
+    description: LDAP URLs
+  
+  pwm.ldap.proxy.username:
+    description: LDAP Proxy User
+ 
+  pwm.ldap.rootContexts:
+    description: LDAP Contextless Login Roots
+    
+  pwm.ldap.testuser.username:
+    description: xx
+  
+  
+  pwm.pwmAdmin.queryMatch:
+    description: xx
+ 
+  pwm.ldap.usernameSearchFilter:
+    description: Username Search Filter
+    
+  pwm.email.smtp.address:
+    description: SMTP Email Server Address
+  
+  
+  pwm.email.smtp.username:
+    description: SMTP Email Server Username
+ 
+  pwm.email.smtp.userpassword:
+    description: SMTP Email Server Password
+    
+  pwm.email.changePassword:
+    description: Change Password Email
+  
+  pwm.email.newUser:
+    description: New User Email
+ 
+  pwm.email.newUser.token:
+    description: New User Verification Email
+    
+  pwm.email.challenge.token:
+    description: Forgotten Password Verification Email
+  
+  pwm.recovery.searchFilter:
+    description: Forgotten Password User Search Filter
+ 
+  pwm.display.newuser.agreement:
+    description: New User Agreement Message

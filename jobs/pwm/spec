@@ -21,6 +21,7 @@ templates:
   tomcat/conf/web.xml.erb: tomcat/conf/web.xml
   
   pwm/web.xml.erb: pwm/web.xml
+  pwm/PwmConfiguration.xml.erb: pwm/PwmConfiguration.xml  
   
 properties:
   pwm.selfURL:

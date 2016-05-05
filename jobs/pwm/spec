@@ -24,6 +24,9 @@ templates:
   pwm/PwmConfiguration.xml.erb: pwm/PwmConfiguration.xml  
   
 properties:
+  pwm.securityKey:
+    description: configuration password for pwm
+
   pwm.selfURL:
     description: Pwm Site URL
  

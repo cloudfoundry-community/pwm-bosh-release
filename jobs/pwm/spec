@@ -68,7 +68,7 @@ properties:
   pwm.email.newUser:
     description: New User Email
  
-  pwm.email.newUser.token:
+  pwm.email.newUserToken:
     description: New User Verification Email
     
   pwm.email.challenge.token:

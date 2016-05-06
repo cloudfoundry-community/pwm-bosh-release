@@ -38,6 +38,10 @@ properties:
   
   pwm.ldap.proxy.username:
     description: LDAP Proxy User
+
+  pwm.ldap.proxy.password:
+    description: LDAP Proxy Password
+
  
   pwm.ldap.rootContexts:
     description: LDAP Contextless Login Roots

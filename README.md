@@ -16,6 +16,7 @@ This release brings the following feature:
 ** multi-Iaas, multi-Os capability
 ** clean separation of data (Bosh persistent disk), logs and configuration
 ** unified operation logic for Cloudfoundry / Bosh operators
+** pwm configuration for declarative bosh manifest file
 
 
 for best practices configuring :

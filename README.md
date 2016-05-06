@@ -4,8 +4,28 @@ PWM is an open source password self service application for LDAP directories. PW
 
 Official project page is at [https://github.com/pwm-project/pwm/](https://github.com/pwm-project/pwm/).
 
-The purpose of this bosh release is to provide bosh operators an easy solution for self service onboarding.
+
+The purpose of this bosh release is to provide Bosh operators an easy solution for self service onboarding.
 Typical use is managing identity in an OpenLDAP directory, and configure Cloudfoundry UAA to use OpenLDAP as identity backend
+
+
+This release brings the following feature:
+* give pwm operators all the bosh benefits
+** OS update with Bosh stemcell mechanisms
+** java jdk and tomcat versionning and update with Bosh release mechanism
+** multi-Iaas, multi-Os capability
+** clean separation of data (Bosh persistent disk), logs and configuration
+** unified operation logic for Cloudfoundry / Bosh operators
+
+
+for best practices configuring :
+* http://blog.trifork.com/2015/07/28/setting-up-pwm-as-a-password-recovery-tool-for-openldap/
+
+For convenience and test purpose, can use a openldap docker image, inside a bosh docker release.
+* https://github.com/osixia/docker-openldap
+* https://github.com/cloudfoundry-community/docker-boshrelease
+
+
 
 
 ## Usage

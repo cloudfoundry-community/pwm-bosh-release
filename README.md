@@ -22,6 +22,17 @@ This release brings the following feature:
 for best practices configuring :
 * http://blog.trifork.com/2015/07/28/setting-up-pwm-as-a-password-recovery-tool-for-openldap/
 
+
+Main built-in configuration choices
+* openldap backend
+* disabled http session persistence
+* session management LOCAL
+* expects front end https offload (ie go router, with route registrar in cloudfoundry context)
+
+see extensive pwm reference docs for evolution
+* http://www.pwm-project.org/pwm/public/reference/settings.jsp#settings_category_NOTES
+
+
 For convenience and test purpose, can use a openldap docker image, inside a bosh docker release.
 * https://github.com/osixia/docker-openldap
 * https://github.com/cloudfoundry-community/docker-boshrelease

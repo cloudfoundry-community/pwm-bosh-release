@@ -1,0 +1,36 @@
+---
+packages:
+- name: pwm
+  version: b794ac7f8b3738e47106bda8cf5b319a97ebe57c
+  fingerprint: b794ac7f8b3738e47106bda8cf5b319a97ebe57c
+  sha1: a4b087d6f91a16bd358b1b0f5fa0b000a41d497d
+  dependencies: []
+- name: openjdk
+  version: 93c072891062f43e6a7fad1f3232064da90429af
+  fingerprint: 93c072891062f43e6a7fad1f3232064da90429af
+  sha1: 54bd0b651f96768aca4b66712223052d85b5137d
+  dependencies: []
+- name: java-common
+  version: 018744938b5a691527c626963211f4ba4b5772bf
+  fingerprint: 018744938b5a691527c626963211f4ba4b5772bf
+  sha1: e2fab53043dcc98eafe2162fd02c015f55289435
+  dependencies: []
+- name: tomcat
+  version: c7a06af2597f1f5f83b0976f33e43bd3e439036d
+  fingerprint: c7a06af2597f1f5f83b0976f33e43bd3e439036d
+  sha1: b73e7162f8c7a413f82e9a39666372ab2ca97d87
+  dependencies:
+  - pwm
+jobs:
+- name: pwm
+  version: 7985388333977fb6fa6e588df135ab16dad2d135
+  fingerprint: 7985388333977fb6fa6e588df135ab16dad2d135
+  sha1: 89f11659c077826cdff9b4153e2ac03353eb5494
+license:
+  version: 58f84cff6b9318a83808830cbd141f0a01e5850b
+  fingerprint: 58f84cff6b9318a83808830cbd141f0a01e5850b
+  sha1: 6fa1346bdf5280b082df094ce4a330c73ec9f24e
+commit_hash: 9684a584
+uncommitted_changes: true
+name: pwm
+version: '1'
